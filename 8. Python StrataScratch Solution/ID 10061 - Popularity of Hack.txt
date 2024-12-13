@@ -1,0 +1,12 @@
+Popularity of Hack - ID 10061
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/10061-popularity-of-hack?code_type=2
+
+
+import pandas as pd
+
+# Start writing code
+df =  pd.merge(facebook_employees, facebook_hack_survey, left_on = 'id', right_on = 'employee_id', how = 'left')
+df.groupby('location')['popularity'].mean().reset_index()

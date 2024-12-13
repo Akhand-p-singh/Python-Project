@@ -1,0 +1,17 @@
+Average Salaries - ID 9917
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/9917-average-salaries?code_type=2
+
+
+# Import your libraries
+import pandas as pd
+
+# Start writing code
+
+df = employee.groupby('department')['salary'].mean().reset_index()
+df = df.rename(columns={'salary':'avg_salary'})
+merged_results = pd.merge(employee,df, on = 'department', how = 'left' )
+merged_results
+merged_results[['department','first_name', 'salary', 'avg_salary' ]]

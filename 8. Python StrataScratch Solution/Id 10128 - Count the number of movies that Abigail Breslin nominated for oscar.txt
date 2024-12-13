@@ -1,0 +1,14 @@
+Id 10128 - Count the number of movies that Abigail Breslin nominated for oscar
+
+Difficulty Level - Easy
+
+Link: https://platform.stratascratch.com/coding/10128-count-the-number-of-movies-that-abigail-breslin-nominated-for-oscar?code_type=2
+
+
+# Import your libraries
+import pandas as pd
+# Start writing code
+df = oscar_nominees
+
+df = df[df['nominee'] == 'Abigail Breslin']
+df.movie.nunique()

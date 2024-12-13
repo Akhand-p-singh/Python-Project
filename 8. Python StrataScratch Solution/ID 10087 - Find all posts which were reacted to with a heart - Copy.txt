@@ -1,0 +1,11 @@
+Find all posts which were reacted to with a heart - ID 10087
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2
+
+
+import pandas as pd
+
+df = pd.merge(facebook_reactions, facebook_posts, left_on = 'post_id', right_on = 'post_id', how = 'left')
+df = df[df['reaction'] == 'heart'][['post_id', 'poster_x', 'post_text', 'post_keywords', 'post_date']].rename(columns = {'poster_x' : 'poster'}).drop_duplicates()

@@ -1,0 +1,14 @@
+Top Ranked Songs - ID 9991
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/9991-top-ranked-songs?code_type=2
+
+
+import pandas as pd 
+
+df = spotify_worldwide_daily_song_ranking
+
+df = df[df['position'] == 1]
+
+df.groupby('trackname')['position'].count().reset_index().sort_values(by = 'position', ascending = False)

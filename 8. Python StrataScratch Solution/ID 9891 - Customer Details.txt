@@ -1,0 +1,15 @@
+Customer Details - ID 9891
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/9891-customer-details?code_type=2
+
+
+# Import your libraries
+import pandas as pd
+import numpy as np
+
+# Start writing code
+
+merge_table = pd.merge(customers, orders, left_on = 'id' , right_on = 'cust_id', how = 'left')
+merge_table[['first_name', 'last_name', 'city', 'order_details']].sort_values(['first_name', 'order_details'])

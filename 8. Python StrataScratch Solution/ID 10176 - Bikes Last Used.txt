@@ -1,0 +1,9 @@
+Bikes Last Used - ID 10176
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/10176-bikes-last-used?code_type=2
+
+df = dc_bikeshare_q1_2012
+
+df.groupby('bike_number')['end_time'].max().reset_index().sort_values(by = 'end_time', ascending = False).rename(columns = {'end_time': 'last_time'})

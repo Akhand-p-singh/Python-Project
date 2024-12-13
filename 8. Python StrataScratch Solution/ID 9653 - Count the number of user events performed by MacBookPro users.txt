@@ -1,0 +1,12 @@
+Count the number of user events performed by MacBookPro users - ID 9653
+
+Difficulty Mode:  Easy 
+
+Link: https://platform.stratascratch.com/coding/9653-count-the-number-of-user-events-performed-by-macbookpro-users?code_type=2
+
+
+import pandas as pd
+
+# Start writing code
+macbook_df = playbook_events[playbook_events["device"] == "macbook pro"]
+macbook_df.groupby('event_name')['user_id'].count().reset_index().sort_values(by = "user_id", ascending = False)

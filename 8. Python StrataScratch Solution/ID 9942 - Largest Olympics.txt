@@ -1,0 +1,12 @@
+ID 9942 - Largest Olympics
+
+Difficulty - Medium
+
+Link: https://platform.stratascratch.com/coding/9942-largest-olympics?code_type=2
+
+import pandas as pd
+
+# Start writing code
+df = olympics_athletes_events
+
+df.groupby('games')['id'].nunique().reset_index().sort_values(by = 'id', ascending = False).head(1)
