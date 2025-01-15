@@ -1,11 +1,11 @@
-Price optimization based on the price elasticity of demand
+**Price optimization based on the price elasticity of demand**
 
-**Business Problem:**
+:pushpin: **Business Problem:**
 
 This project focuses on determining the optimal pricing for items in a cafe to maximize profit using the concept of price elasticity of demand (PED). The project involves analyzing sales data to understand how price changes affect the quantity of products sold.
 
 
-**About Dataset:**
+:bar_chart: **About Dataset:**
 
 **Sales Metadata:** Contains information about each sale, including item IDs, names, and categories.
 
